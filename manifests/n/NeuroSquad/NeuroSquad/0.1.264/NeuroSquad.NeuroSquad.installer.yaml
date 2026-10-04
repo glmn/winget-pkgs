@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: NeuroSquad.NeuroSquad
+PackageVersion: 0.1.264
+InstallerType: exe
+Scope: user
+InstallModes:
+- interactive
+- silent
+- silentWithProgress
+InstallerSwitches:
+  Silent: --silent
+  SilentWithProgress: --silent
+  InstallLocation: --dir "<INSTALLPATH>"
+ExpectedReturnCodes:
+- InstallerReturnCode: 2
+  ReturnResponse: packageInUse
+UpgradeBehavior: install
+ProductCode: NeuroSquad
+ReleaseDate: 2026-10-04
+AppsAndFeaturesEntries:
+- DisplayName: NeuroSquad
+  Publisher: NeuroSquad
+  ProductCode: NeuroSquad
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/glmn-ai/neurosquad-releases/releases/download/v0.1.264/NeuroSquad-Setup.exe
+  InstallerSha256: 924DC45AE66CB6C7278F29A284E457CA3C1C1C9046CF23F4CA74DF3258215FF3
+ManifestType: installer
+ManifestVersion: 1.12.0
